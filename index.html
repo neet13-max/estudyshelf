@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StudyShelf</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>StudyShelf</h1>
+    <button onclick="logout()">Logout</button>
+</header>
+
+<div class="main">
+    <h2 id="welcome">Welcome to StudyShelf!</h2>
+    <p>Your study materials in one place.</p>
+
+    <h2>Subjects</h2>
+
+    <input type="text" id="search" placeholder="Search subjects..." oninput="searchSubjects()">
+
+    <div class="subject" onclick="openSubject('c')">
+        <h3>C Programming</h3>
+        <p>Programming fundamentals and concepts</p>
+    </div>
+
+    <div class="subject" onclick="openSubject('math')">
+        <h3>Mathematics</h3>
+        <p>Algebra, differentiation and integration</p>
+    </div>
+
+    <div class="subject" onclick="openSubject('physics')">
+        <h3>Physics</h3>
+        <p>Mechanics, waves and electricity</p>
+    </div>
+
+    <div class="subject" onclick="openSubject('english')">
+        <h3>English</h3>
+        <p>Grammar and communication skills</p>
+    </div>
+
+    <div id="chapters"></div>
+
+    <hr>
+
+    <h2>Share Your Notes</h2>
+    <form id="notesForm">
+        <input type="text" id="noteTitle" placeholder="Note title" required>
+        <textarea id="noteContent" placeholder="Write your notes here..." required></textarea>
+        <button type="submit">Share Notes</button>
+    </form>
+
+    <h2>Shared Notes</h2>
+    <div id="sharedNotes"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
