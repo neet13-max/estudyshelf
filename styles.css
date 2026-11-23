@@ -1,82 +1,155 @@
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f5fa;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
     color: #333;
 }
 
 .container {
-    background: white;
     width: 320px;
-    margin: 80px auto;
+    max-width: 94%;
+    margin: 60px auto;
     padding: 25px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-h1 {
-    color: #315b96;
-}
-
-input, textarea {
-    width: 90%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-textarea {
-    min-height: 100px;
-}
-
-button {
-    background: #315b96;
-    color: white;
-    padding: 11px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #24436f;
-}
-
-a {
-    color: #315b96;
-}
-
-header {
     background: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .main {
-    padding: 25px;
+    width: 90%;
     max-width: 850px;
-    margin: auto;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+header {
+    background: #244b74;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: #244b74;
+}
+
+header h1 {
+    color: white;
 }
 
 .subject, .chapter {
     background: white;
-    padding: 18px;
+    padding: 20px;
     margin: 15px 0;
     border-radius: 8px;
-}
-
-.subject {
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.subject:hover {
-    background: #e5edf8;
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.chapter {
-    border-left: 4px solid #315b96;
+button {
+    background: #244b74;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button:hover {
+    background: #183653;
+}
+
+/* Mobile responsive design */
+@media screen and (max-width: 600px) {
+    html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 17px;
+    }
+
+    .main {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 20px 15px;
+    }
+
+    header {
+        width: 100%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        width: 94%;
+        max-width: 100%;
+        margin: 30px auto;
+        padding: 25px 18px;
+    }
+
+    .subject, .chapter {
+        width: 100%;
+        margin: 12px 0;
+        padding: 20px;
+    }
+
+    input, textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    button {
+        max-width: 100%;
+        font-size: 17px;
+        padding: 14px 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
 }
